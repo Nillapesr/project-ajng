@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getBot, saveBot, deleteBot, getLogs } from '@/lib/db';
 import { deleteWebhook } from '@/lib/botEngine';
+export const dynamic = 'force-dynamic';
 
 export async function GET(req, { params }) {
   const bot = await getBot(params.id);
